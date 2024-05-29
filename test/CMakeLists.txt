@@ -1,5 +1,7 @@
 cmake_minimum_required (VERSION 3.5)
 
+set(CMAKE_POLICY_DEFAULT_CMP0153 OLD)
+
 if(DEFINED REMCU_PREBUILD_CONFIG_FILE)
       include(REMCU_PREBUILD_CONFIG_FILE)
 endif()
