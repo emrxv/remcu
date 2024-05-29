@@ -55,7 +55,7 @@ REMCU_C: $(IR_FILES)
 #------------------------------------------------------------------------------- 
 %.ll: %.c
 	$(CLANG) $(IR_FLAGS) $(LOCAL_CFLAGS) -c $< -o $(BUILD_DIR)/$(notdir $<).$(IR_SUFFIX) --verbose
-    	echo "Running OPT on $(BUILD_DIR)/$(notdir $<).ll"
+	echo "Running OPT on $(BUILD_DIR)/$(notdir $<).ll"
 	$(OPT) $(OPT_FLAGS) $(BUILD_DIR)/$(notdir $<).ll -o  $(BUILD_DIR)/$(notdir $<).adin.ll --debug
 # 	$(CBE) $(CBE_OPTIONS) $(BUILD_DIR)/$(notdir $<).adin.ll -o $(OUTPUT_DIR)/$(notdir $<).remcu.c
 # 	$(CBE) $(CBE_OPTIONS) $(BUILD_DIR)/$(notdir $<).$(IR_SUFFIX) -o $(OUTPUT_MCU_DIR)/$(notdir $<).mcu.c
