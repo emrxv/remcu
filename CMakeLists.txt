@@ -1,4 +1,10 @@
 cmake_minimum_required (VERSION 3.5)
+project(
+	remcu
+ 	VERSION 1.0
+  	LANUGAGES CXX)
+
+set(CMAKE_POLICY_DEFAULT_CMP0153 OLD)
 
 if(NOT DEFINED CMAKE_TOOLCHAIN_FILE)
 	message(FATAL_ERROR " not defined toolchain file")
