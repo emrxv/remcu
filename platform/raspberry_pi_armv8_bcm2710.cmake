@@ -17,7 +17,7 @@ set(RASPBERRY_TOOL_PATH $ENV{RASPBERRY_TOOL_PATH})
 SET(CMAKE_C_COMPILER   ${RASPBERRY_TOOL_PATH}/bin/armv8-rpi3-linux-gnueabihf-gcc)
 SET(CMAKE_CXX_COMPILER ${RASPBERRY_TOOL_PATH}/bin/armv8-rpi3-linux-gnueabihf-g++)
 # Define the sysroot path for the RaspberryPi distribution in our tools folder 
-SET(CMAKE_FIND_ROOT_PATH ${RASPBERRY_TOOL_PATH}/x-tools/armv8-rpi3-linux-gnueabihf/armv8-rpi3-linux-gnueabihf/sysroot/)
+SET(CMAKE_FIND_ROOT_PATH ${RASPBERRY_TOOL_PATH}/armv8-rpi3-linux-gnueabihf/sysroot/)
 
 SET(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} --sysroot=${CMAKE_FIND_ROOT_PATH}")
 SET(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} --sysroot=${CMAKE_FIND_ROOT_PATH}")
