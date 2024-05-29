@@ -14,8 +14,8 @@ endif()
 set(RASPBERRY_TOOL_PATH $ENV{RASPBERRY_TOOL_PATH})
 
 # Define the cross compiler locations
-SET(CMAKE_C_COMPILER   ${RASPBERRY_TOOL_PATH}/x-tools/armv8-rpi3-linux-gnueabihf/bin/armv8-rpi3-linux-gnueabihf-gcc)
-SET(CMAKE_CXX_COMPILER ${RASPBERRY_TOOL_PATH}/x-tools/armv8-rpi3-linux-gnueabihf/bin/armv8-rpi3-linux-gnueabihf-g++)
+SET(CMAKE_C_COMPILER   ${RASPBERRY_TOOL_PATH}/bin/armv8-rpi3-linux-gnueabihf-gcc)
+SET(CMAKE_CXX_COMPILER ${RASPBERRY_TOOL_PATH}/bin/armv8-rpi3-linux-gnueabihf-g++)
 # Define the sysroot path for the RaspberryPi distribution in our tools folder 
 SET(CMAKE_FIND_ROOT_PATH ${RASPBERRY_TOOL_PATH}/x-tools/armv8-rpi3-linux-gnueabihf/armv8-rpi3-linux-gnueabihf/sysroot/)
 
@@ -36,7 +36,7 @@ include(${REMCU_VM_PATH}/cmake/common_linux_flags.cmake)
 
 set(MCU_INCLUDE_MK_FILE ${REMCU_VM_PATH}/mcu_utils/linux.mk)
 
-# set(STRIP_COMMAND ${RASPBERRY_TOOL_PATH}/x-tools/armv8-rpi3-linux-gnueabihf/bin/armv8-rpi3-linux-gnueabihf-strip)
+# set(STRIP_COMMAND ${RASPBERRY_TOOL_PATH}/bin/armv8-rpi3-linux-gnueabihf-strip)
 
 set(TARGET_REMCU_OS_NAME Raspbian_armv8)
 
