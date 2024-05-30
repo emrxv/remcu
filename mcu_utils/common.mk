@@ -8,7 +8,7 @@ AR 				= llvm-ar
 
 BUILD_DIR 	= $(BUILD_DIRECTORY)
 
-OPT_FLAGS += -S
+OPT_FLAGS += -adin -S
 
 IR_FLAGS += -S -emit-llvm -DREMCU_LIB
 
