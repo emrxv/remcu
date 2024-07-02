@@ -10,7 +10,7 @@ BUILD_DIR 	= $(BUILD_DIRECTORY)
 
 OPT_FLAGS += -adin -S
 
-IR_FLAGS += -S -emit-llvm -DREMCU_LIB -D__FPU_PRESENT=0
+IR_FLAGS += -S -emit-llvm -DREMCU_LIB
 
 IR_FLAGS += -I $(MCU_UTIL_PATH)/include_utils
 IR_FLAGS += $(COMPILE_FLAGS)
