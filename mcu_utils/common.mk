@@ -12,7 +12,7 @@ OPT_FLAGS += -adin -S
 
 IR_FLAGS += -S -emit-llvm -DREMCU_LIB
 
-IR_FLAGS += -I $(MCU_UTIL_PATH)/include_utils
+IR_FLAGS += -I $(MCU_UTIL_PATH)/include_utils -I $(CMSIS_PATH) -I $(HAL_PATH)
 IR_FLAGS += $(COMPILE_FLAGS)
 
 CBE = echo
