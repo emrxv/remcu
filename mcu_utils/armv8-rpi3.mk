@@ -7,7 +7,7 @@ CMSIS_PATH = $(BUILD_DIRECTORY)/stm32/stm32f10X/STM32F10x_StdPeriph_Lib_V3.5.0/L
 HAL_PATH = $(BUILD_DIRECTORY)/stm32/stm32f10X/STM32F10x_StdPeriph_Lib_V3.5.0/Libraries/STM32F10x_StdPeriph_Driver/inc
 
 # Compiler flags for Cortex-M3
-COMPILE_FLAGS = -fPIC -mcpu=cortex-m3 -mthumb -O2 -Wall -I$(CMSIS_PATH) -I$(HAL_PATH) --target=arm-linux-gnueabihf --gcc-toolchain=$(RASPBERRY_TOOL_PATH)/x-tools/armv8-rpi3-linux-gnueabihf/bin/
+COMPILE_FLAGS = -fPIC -mcpu=cortex-m33 -mthumb -O2 -Wall -I$(CMSIS_PATH) -I$(HAL_PATH) --target=arm-linux-gnueabihf --gcc-toolchain=$(RASPBERRY_TOOL_PATH)/x-tools/armv8-rpi3-linux-gnueabihf/bin/
 
 # Include CMSIS and HAL paths in IR_FLAGS
 IR_FLAGS += -I $(CMSIS_PATH) -I $(HAL_PATH) --target=arm-linux-gnueabihf
